@@ -75,11 +75,11 @@
 				<h2 class="display-3">Hi James!!</h2>
 				<p class="lead font-weight-bold">So here's what I've got so far as the functionality goes. I don't have a database set up for it yet, so I can't tell if it's talking to the backend yet, but this is what the front end part would look like.</p>
 				<hr class="my-2">
-				<p class="nothing font-weight-bold">Press the button</p>
+				<p class="font-weight-bold">Press the button</p>
 				<h3>Korigan Payne</h3>
 				<p>Owner</p>
 				<div class="ml-5 pl-5">
-					<button class="btn btn-primary mr-5" type="button"><a class="" href="public_html/api/user/index.php" target="_blank">Login</a> </button>
+					<button class="btn btn-primary mr-5" type="button"><a class="text-light" href="public_html/api/user/index.php" target="_blank">Login</a> </button>
 				</div>
 			</div>
 		</main>
