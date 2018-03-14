@@ -90,10 +90,10 @@
 				<p class="font-weight-bold">Here's your typical sign-in/sign-up options:</p>
 				<h3>Korigan Payne</h3>
 				<div class="ml-5 pl-5 cd-main-nav js-main-nav">
-					<div class="cd-main-nav__list js-signin-modal-trigger">
-						<button class="btn btn-primary mr-5" type="button"> <a class="text-light cd-main-nav__item cd-main-nav__item--signin" href="#" data-signin="login">Sign in</a> </button>
-						<button class="btn btn-primary mr-5" type="button"> <a class="text-light cd-main-nav__item cd-main-nav__item--signin" href="#" data-signin="login">Sign up</a> </button>
-					</div>
+					<ul class="cd-main-nav__list js-signin-modal-trigger">
+						<li class="btn-primary"><a class="text-light cd-main-nav__item cd-main-nav__item--signin" href="#" data-signin="login">Sign in</a> </li>
+						<li class="btn-primary"><a class="text-light cd-main-nav__item cd-main-nav__item--signin btn-primary" href="#" data-signin="login">Sign up</a> </li>
+					</ul>
 				</div>
 			</div>
 
@@ -106,8 +106,8 @@
 						<li><a href="#" data-signin="signup" data-type="signup">New account</a></li>
 					</ul>
 
-					<div class="cd-signin-modal__block js-signin-modal-block" data-type="login"> <!-- log in form -->
-						<form class="cd-signin-modal__form">
+					<div class="cd-signin-modal__block js-signin-modal-block" data-type="login">
+						<form class="cd-signin-modal__form mb-5">
 							<p class="cd-signin-modal__fieldset">
 								<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signin-email">E-mail</label>
 								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail">
@@ -131,7 +131,7 @@
 							</p>
 						</form>
 
-						<p class="cd-signin-modal__bottom-message js-signin-modal-trigger"><a href="#" data-signin="reset">Forgot your password?</a></p>
+						<p class="cd-signin-modal__bottom-message js-signin-modal-trigger mt-5"><a href="#" data-signin="reset">Forgot your password?</a></p>
 					</div>
 
 					<div class="cd-signin-modal__block js-signin-modal-block" data-type="signup"> <!-- sign up form -->
