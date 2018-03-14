@@ -73,16 +73,21 @@
 		<main>
 			<div class="jumbotron bg-white mt-5">
 				<h2 class="display-3">Hi James!!</h2>
-				<p class="lead font-weight-bold">So here's what I've got so far as the functionality goes. I don't have a database set up for it yet, so I can't tell if it's talking to the backend yet, but this is what the front end part would look like.</p>
+				<p class="lead font-weight-bold">So here's what I've got so far as the functionality goes. I don't have a database set up for it yet, so I can't tell if it's talking to the backend, but this is what the front end part would look like. You can go <a href="https://github.com/Koriganp/old-friends" target="_blank">here</a> to check out my code.</p>
 				<hr class="my-2">
 				<p class="font-weight-bold">Press the button</p>
 				<h3>Korigan Payne</h3>
 				<p>Owner</p>
 				<div class="ml-5 pl-5">
-					<button class="btn btn-primary mr-5" type="button"><a class="text-light" href="public_html/api/user/index.php" target="_blank">Login</a> </button>
+					<button class="btn btn-primary mr-5" type="button"> <a class="text-light" href="public_html/api/user/index.php" target="_blank">Login</a> </button>
 				</div>
 			</div>
 		</main>
+		<footer class="container-fluid">
+			<div class="fixed-bottom justify-content-center">
+				<p class="text-center mt-2">&copy; 2018 Korigan Design</p>
+			</div>
+		</footer>
 	</body>
 </html>
 
