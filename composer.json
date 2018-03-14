@@ -1,0 +1,18 @@
+{
+  "require": {
+    "apigen/apigen": "dev-master",
+    "cloudinary/cloudinary_php": "dev-master",
+    "guzzlehttp/guzzle": "@stable",
+    "lcobucci/jwt": "3.2",
+    "phpdocumentor/reflection-docblock": "@stable",
+    "phpunit/dbunit": "@stable",
+    "phpunit/phpunit": "@stable",
+    "ramsey/uuid": "@stable",
+    "roave/better-reflection": "dev-master#a402048",
+    "swiftmailer/swiftmailer": "^6.0"
+  },
+  "scripts": {
+    "apigen": "./vendor/bin/apigen generate ./php/classes/*.php --destination doc",
+    "phpunit": "./vendor/bin/phpunit -c ./php/classes/Test --coverage-html coverage"
+  }
+}
