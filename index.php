@@ -78,7 +78,7 @@
 				<p class="nothing font-weight-bold">Press the button</p>
 				<h3>Korigan Payne</h3>
 				<p>Owner</p>
-				<div class="dropdown ml-5 pl-5">
+				<div class="ml-5 pl-5">
 					<button class="btn btn-primary mr-5" type="button"><a class="" href="public_html/api/user/index.php" target="_blank">Login</a> </button>
 				</div>
 			</div>
