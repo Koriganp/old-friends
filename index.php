@@ -23,6 +23,9 @@
 		<!-- My CSS -->
 
 		<link href="styles/main.css" rel="stylesheet"/>
+		<link href="styles/reset.css" rel="stylesheet">
+		<link href="styles/style.css" rel="stylesheet">
+		<link href="styles/demo.css" rel="stylesheet">
 
 		<!-- jQuery, Popper.js, Bootstrap JS -->
 
