@@ -1,0 +1,146 @@
+/************************************************************************/
+/*Universal for site*/
+/************************************************************************/
+
+
+/*change font for site*/
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 1em;
+	font-family: 'Raleway', sans-serif;
+	text-align: justify;
+	background-color: white;
+}
+
+/*Set height for site*/
+body, html {
+	height: 100%;
+}
+
+/*Color First Letter*/
+.first-letter {
+	color: blue;
+	font-weight: bold;
+}
+
+/************************************************************************/
+/*Navbar*/
+/************************************************************************/
+
+/*Change brand size*/
+.nav-icon {
+	max-width: 10%;
+}
+
+.position-toggle {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+li > a {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: black;
+}
+
+li > a:hover {
+	text-decoration: none;
+}
+
+/*For Large Screens*/
+
+@media only screen and (min-width: 992px) {
+	/*Spacing for nav-links*/
+	.nav-item {
+		margin-left: 3rem;
+	}
+
+	.space {
+		margin-right: 3rem;
+	}
+
+	.brand-text {
+		font-family: 'Julius Sans One', sans-serif;
+		font-size: 2.5em;
+	}
+
+	.link-trait {
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.navbar-default {
+		background-color:transparent !important;
+		border-color:transparent;
+		background-image:none;
+		box-shadow:none;
+	}
+}
+
+/*For Medium Screens*/
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	/*Spacing for nav-links*/
+	.nav-item {
+		margin-left: 2rem;
+	}
+
+	.space {
+		margin-right: 2rem;
+	}
+
+	.brand-text {
+		font-family: 'Julius Sans One', sans-serif;
+		font-size: 1.75em;
+	}
+
+	.link-trait {
+		color: white;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.navbar-default {
+		background-color:transparent !important;
+		border-color:transparent;
+		background-image:none;
+		box-shadow:none;
+	}
+}
+
+/*For Small Screens*/
+
+@media only screen and (max-width: 768px) {
+	/*Spacing for nav-links*/
+	.nav-item {
+		margin-left: 1rem;
+	}
+
+	.space {
+		margin-right: 1rem;
+	}
+
+	.brand-text {
+		font-family: 'Julius Sans One', sans-serif;
+		font-size: 1em;
+	}
+
+	.link-trait {
+		color: black;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.navbar-default {
+		border-color: white;
+	}
+}
+
+.home-image {
+	width: 100%;
+	padding-top: 8rem;
+}
