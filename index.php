@@ -23,9 +23,6 @@
 		<!-- My CSS -->
 
 		<link href="styles/main.css" rel="stylesheet"/>
-		<link href="styles/reset.css" rel="stylesheet">
-		<link href="styles/style.css" rel="stylesheet">
-		<link href="styles/demo.css" rel="stylesheet">
 
 		<!-- jQuery, Popper.js, Bootstrap JS -->
 
@@ -33,9 +30,15 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-		<title>Mock-up for password resetting</title>
+		<title>Sign-in/Sign-up Modal with password reset</title>
 	</head>
+
+	<!-- Main Content -->
+
 	<body>
+
+		<!-- Navbar -->
+
 		<header>
 			<nav class="navbar fixed-top navbar-expand-md navbar-light site-nav">
 				<a class="navbar-brand brand-text" href="#"><img class="nav-icon space" src="images/KD.png"><strong> <span class="first-letter">K</span>origan Design</strong></a>
@@ -63,6 +66,9 @@
 				</div>
 			</nav>
 		</header>
+
+		<!-- Empty Section -->
+
 		<section>
 			<div class="container">
 				<div class="row">
@@ -73,24 +79,126 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- Sign-in/Sign-up Buttons -->
+
 		<main>
 			<div class="jumbotron bg-white mt-5">
 				<h2 class="display-3">Hi James!!</h2>
 				<p class="lead font-weight-bold">So here's what I've got so far as the functionality goes. I don't have a database set up for it yet, so I can't tell if it's talking to the backend, but this is what the front end part would look like. You can go <a href="https://github.com/Koriganp/old-friends" target="_blank">here</a> to check out my code.</p>
 				<hr class="my-2">
-				<p class="font-weight-bold">Press the button</p>
+				<p class="font-weight-bold">Here's your typical sign-in/sign-up options:</p>
 				<h3>Korigan Payne</h3>
-				<p>Owner</p>
-				<div class="ml-5 pl-5">
-					<button class="btn btn-primary mr-5" type="button"> <a class="text-light" href="public_html/api/user/index.php" target="_blank">Login</a> </button>
+				<div class="ml-5 pl-5 cd-main-nav js-main-nav">
+					<div class="cd-main-nav__list js-signin-modal-trigger">
+						<button class="btn btn-primary mr-5" type="button"> <a class="text-light cd-main-nav__item cd-main-nav__item--signin" href="#" data-signin="login">Sign in</a> </button>
+						<button class="btn btn-primary mr-5" type="button"> <a class="text-light cd-main-nav__item cd-main-nav__item--signin" href="#" data-signin="login">Sign up</a> </button>
+					</div>
 				</div>
 			</div>
+
+			<!-- Entire Modal Form -->
+
+			<div class="cd-signin-modal js-signin-modal">
+				<div class="cd-signin-modal__container">
+					<ul class="cd-signin-modal__switcher js-signin-modal-switcher js-signin-modal-trigger">
+						<li><a href="#" data-signin="login" data-type="login">Sign in</a></li>
+						<li><a href="#" data-signin="signup" data-type="signup">New account</a></li>
+					</ul>
+
+					<div class="cd-signin-modal__block js-signin-modal-block" data-type="login"> <!-- log in form -->
+						<form class="cd-signin-modal__form">
+							<p class="cd-signin-modal__fieldset">
+								<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signin-email">E-mail</label>
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail">
+								<span class="cd-signin-modal__error">Error message here!</span>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signin-password">Password</label>
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password">
+								<a href="#" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
+								<span class="cd-signin-modal__error">Error message here!</span>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<input type="checkbox" id="remember-me" checked class="cd-signin-modal__input ">
+								<label for="remember-me">Remember me</label>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width" type="submit" value="Login">
+							</p>
+						</form>
+
+						<p class="cd-signin-modal__bottom-message js-signin-modal-trigger"><a href="#" data-signin="reset">Forgot your password?</a></p>
+					</div>
+
+					<div class="cd-signin-modal__block js-signin-modal-block" data-type="signup"> <!-- sign up form -->
+						<form class="cd-signin-modal__form">
+							<p class="cd-signin-modal__fieldset">
+								<label class="cd-signin-modal__label cd-signin-modal__label--username cd-signin-modal__label--image-replace" for="signup-username">Username</label>
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-username" type="text" placeholder="Username">
+								<span class="cd-signin-modal__error">Error message here!</span>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signup-email">E-mail</label>
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-email" type="email" placeholder="E-mail">
+								<span class="cd-signin-modal__error">Error message here!</span>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signup-password">Password</label>
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-password" type="text"  placeholder="Password">
+								<a href="#" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
+								<span class="cd-signin-modal__error">Error message here!</span>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<input type="checkbox" id="accept-terms" class="cd-signin-modal__input ">
+								<label for="accept-terms">I agree to the <a href="#">Terms</a></label>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Create account">
+							</p>
+						</form>
+					</div>
+
+					<div class="cd-signin-modal__block js-signin-modal-block" data-type="reset"> <!-- reset password form -->
+						<p class="cd-signin-modal__message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+						<form class="cd-signin-modal__form">
+							<p class="cd-signin-modal__fieldset">
+								<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="reset-email">E-mail</label>
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="reset-email" type="email" placeholder="E-mail">
+								<span class="cd-signin-modal__error">Error message here!</span>
+							</p>
+
+							<p class="cd-signin-modal__fieldset">
+								<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding" type="submit" value="Reset password">
+							</p>
+						</form>
+
+						<p class="cd-signin-modal__bottom-message js-signin-modal-trigger"><a href="#" data-signin="login">Back to log-in</a></p>
+					</div>
+					<a href="#" class="cd-signin-modal__close js-close">Close</a>
+				</div>
+			</div>
+
 		</main>
 		<footer class="container-fluid">
 			<div class="fixed-bottom justify-content-center">
 				<p class="text-center mt-2">&copy; 2018 Korigan Design</p>
 			</div>
 		</footer>
+
+		<!-- JavaScript -->
+
+		<script src="js/placeholders.min.js"></script>
+		<script src="js/main.js"></script>
+
 	</body>
 </html>
 
